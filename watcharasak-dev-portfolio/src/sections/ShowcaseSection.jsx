@@ -49,17 +49,18 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
+              <img src="/images/SLP-proj.png" alt="Sleep App Interface" />
             </div>
             <div className="text-content">
-              <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
-              </h2>
-              <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
-              </p>
+            <h2>
+                Sleep Polysomnography Application: Advanced Medical Data Visualization 
+                for Sleep Studies
+            </h2>
+            <p className="text-white-50 md:text-xl">
+                A comprehensive web application built with Next.js featuring real-time 
+                monitoring, patient management, and interactive data visualization tools 
+                for sleep study analysis.
+            </p>
             </div>
           </div>
 
@@ -67,18 +68,18 @@ const AppShowcase = () => {
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
-                  src="/images/project2.png"
+                  src="/images/FDT-proj.png"
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <h2>Fishery Digital Twin Simulation</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <img src="/images/HIS.png" alt="YC Directory App" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Health Insight System Application</h2>
             </div>
           </div>
         </div>

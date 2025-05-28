@@ -11,10 +11,6 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
 ];
 
 const words = [
@@ -29,7 +25,7 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 2, suffix: "+", label: "Years of Experience" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
   { value: 10, suffix: "+", label: "Completed Projects" },
   { value: 100, suffix: "%", label: "To Push Boundaries Out!" },
 ];
@@ -72,19 +68,19 @@ const logoIconsList = [
 
 const abilities = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    imgPath: "/images/code.png",
+    title: "Fullstack Adaptability",
+    desc: "Quick learner who adapts to new technologies and frameworks, from React to Flutter to Angular migrations.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    imgPath: "/images/teamwork.png",
+    title: "Collaborative Problem-Solving",
+    desc: "Strong team player with experience working in international environments and diverse project teams.",
   },
   {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    imgPath: "/images/innovative.png",
+    title: "Creative Implementation",
+    desc: "Innovative thinking applied to real-world solutions, from healthcare apps to telemedicine platforms.",
   },
 ];
 
@@ -146,39 +142,44 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    review: "Watcharasak demonstrated strong frontend development skills during his internship, particularly in implementing real-time data visualization for medical applications.",
+    imgPath: "/images/logos/EJ-logo_revised_white.png",
+    logoPath: "/images/logos/EJ-logo_revised_white.png",
+    title: "Front-End Developer Intern",
+    company: "Eyes Japan",
+    date: "Jun 2024 - Dec 2024",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed Sleep Polysomnography Application using Next.js with SSR for real-time medical data visualization",
+      "Created interactive HUD systems for Ocean Digital Twin project using Unreal Engine Blueprints",
+      "Built web interface for Air Traffic Control ASR comparison tool with audio playback features",
+      "Collaborated with international team of developers and designers"
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    review: "Watcharasak showed quick learning ability and technical adaptability during his short but impactful internship.",
+    imgPath: "/images/logos/cropped-cropped-Kannabiz-Tech-Logo.png",
+    logoPath: "/images/logos/cropped-cropped-Kannabiz-Tech-Logo.png",
+    title: "IoT Engineer Intern", 
+    company: "Kannabiz Tech",
+    date: "Jun 2023 - Jul 2023",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed and maintained custom scripts to improve system efficiency",
+      "Troubleshot issues with LAN/WAN and voice systems",
+      "Assisted in hardware-software integration projects"
     ],
   },
-  {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+   {
+    review: "Watcharasak demonstrated strong academic performance and practical application of software engineering principles through his thesis and coursework projects.",
+    imgPath: "/images/logos/mahidol_logo.png",
+    logoPath: "/images/logos/logo-MU_Color.png",
+    title: "Computer Engineering Student",
+    company: "Mahidol University",
+    date: "2021 - Present",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Developed Health Insight System thesis project using Flutter framework for elderly healthcare data collection",
+      "Implemented API connections and backend integration for mobile applications",
+      "Participated in Cyber Security Club activities and collaborative projects",
+      "Maintained high academic standing while working on real-world software solutions"
     ],
   },
 ];

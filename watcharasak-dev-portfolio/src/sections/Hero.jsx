@@ -12,7 +12,6 @@ const Hero = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 5,
                 ease: 'power2.inout',
                 stagger: 0.2,
             },
@@ -30,7 +29,7 @@ const Hero = () => {
             <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
                 <div className='flex flex-col gap-7'>
                     <div className='hero-text'>
-                        <h1>Shaping 
+                        <h1>Building 
                             <span className='slide'> 
                                 <span className="wrapper">
                                     {words.map((word) => (
@@ -43,12 +42,12 @@ const Hero = () => {
                                 </span>
                             </span>
                         </h1>
-                        <h1>into Real Projects</h1>
-                        <h1>that Deliver Results</h1>
+                        <h1>with Modern Technology</h1>
+                        <h1>that Makes Impact</h1>
                     </div>
                     <p className='text-white-50 md:text-xl relative z-10 pointer-events-none'>
-                        Hi, I'm Watcharasak, a Front-end Developer with a passion for crafting innovative solutions.
-                        specialize in transforming ideas into real projects that deliver results.
+                        Hi, I'm Watcharasak, a Computer Engineering student and Frontend Developer who loves 
+                        creating user-friendly applications that solve real-world problems.
                     </p>
                     <Button
                         className='md:w-80 md:h-16 w-60 h-12'
@@ -60,7 +59,7 @@ const Hero = () => {
             {/*RIGHT: 3D Model */}
             <figure>
                 <div className="hero-3d-layout">
-                    <HeroExperience />
+                 <HeroExperience />
                 </div>
             </figure>
         </div>
