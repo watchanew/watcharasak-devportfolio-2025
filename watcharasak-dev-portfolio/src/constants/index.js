@@ -248,18 +248,22 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    url: "https://www.instagram.com/watchanew"
   },
   {
     name: "fb",
-    imgPath: "/images/fb.png",
+    imgPath: "/images/fb.png", 
+    url: "https://www.facebook.com/newsrwch"
   },
   {
     name: "x",
     imgPath: "/images/x.png",
+    url: ""
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/watcharasak-prommanee-a287771b3"
   },
 ];
 
