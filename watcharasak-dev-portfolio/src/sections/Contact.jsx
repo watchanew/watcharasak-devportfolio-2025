@@ -7,6 +7,7 @@ import ContactExperience from "../components/Models/Contact/ContactExperience.js
 const Contact = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -20,22 +21,35 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
+    setLoading(true);
+    setMessage("");
 
     try {
-      await emailjs.sendForm(
+      const result = await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
-      // Reset form and stop loading
+      // Production-friendly success logging
+      if (import.meta.env.DEV) {
+        console.log("✅ Email sent successfully:", result.status);
+      }
+
+      setMessage("Message sent successfully! I'll get back to you soon. 🎉");
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      // Production-friendly error logging
+      if (import.meta.env.DEV) {
+        console.error("❌ Email sending failed:", error.text || error.message);
+      }
+
+      setMessage(
+        "Oops! Something went wrong. Please try again or contact me directly."
+      );
     } finally {
-      setLoading(false); // Always stop loading, even on error
+      setLoading(false);
     }
   };
 
@@ -43,8 +57,8 @@ const Contact = () => {
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="Get in Touch – Let’s Connect"
-          sub="💬 Have questions or ideas? Let’s talk! 🚀"
+          title="Get in Touch – Let's Connect"
+          sub="💬 Have questions or ideas? Let's talk! 🚀"
         />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
@@ -54,6 +68,18 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col gap-7"
               >
+                {message && (
+                  <div
+                    className={`p-3 rounded-md text-center ${
+                      message.includes("successfully")
+                        ? "bg-green-100 text-green-800"
+                        : "bg-red-100 text-red-800"
+                    }`}
+                  >
+                    {message}
+                  </div>
+                )}
+
                 <div>
                   <label htmlFor="name">Your name</label>
                   <input
@@ -62,8 +88,9 @@ const Contact = () => {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder="What's your good name?"
                     required
+                    disabled={loading}
                   />
                 </div>
 
@@ -75,8 +102,9 @@ const Contact = () => {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="What’s your email address?"
+                    placeholder="What's your email address?"
                     required
+                    disabled={loading}
                   />
                 </div>
 
@@ -90,10 +118,11 @@ const Contact = () => {
                     placeholder="How can I help you?"
                     rows="5"
                     required
+                    disabled={loading}
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
