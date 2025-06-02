@@ -24,6 +24,17 @@ const Contact = () => {
     setLoading(true);
     setMessage("");
 
+    // Check if environment variables are available
+    if (
+      !import.meta.env.VITE_APP_EMAILJS_SERVICE_ID ||
+      !import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID ||
+      !import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    ) {
+      setMessage("Email service is not configured. Please contact me directly.");
+      setLoading(false);
+      return;
+    }
+
     try {
       const result = await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -32,19 +43,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
-      // Production-friendly success logging
-      if (import.meta.env.DEV) {
-        console.log("✅ Email sent successfully:", result.status);
-      }
-
       setMessage("Message sent successfully! I'll get back to you soon. 🎉");
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      // Production-friendly error logging
-      if (import.meta.env.DEV) {
-        console.error("❌ Email sending failed:", error.text || error.message);
-      }
-
       setMessage(
         "Oops! Something went wrong. Please try again or contact me directly."
       );

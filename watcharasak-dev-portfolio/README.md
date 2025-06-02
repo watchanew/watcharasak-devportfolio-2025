@@ -117,15 +117,17 @@ For Vercel deployment:
 2. Set environment variables in Vercel dashboard
 3. Deploy automatically on push to main branch
 
-## 📝 Environment Variables
+## Environment Variables
 
-Required environment variables for contact form functionality:
+Create a `.env` file in the root directory:
 
-| Variable | Description |
-|----------|-------------|
-| `VITE_APP_EMAILJS_SERVICE_ID` | EmailJS service ID |
-| `VITE_APP_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
-| `VITE_APP_EMAILJS_PUBLIC_KEY` | EmailJS public key |
+```env
+VITE_APP_EMAILJS_SERVICE_ID=your_service_id
+VITE_APP_EMAILJS_TEMPLATE_ID=your_template_id  
+VITE_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+See `.env.example` for reference.
 
 ## 🎯 Key Features Implementation
 
